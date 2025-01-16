@@ -1,8 +1,8 @@
 name: App with Github Actions, ArgoCD
 
 on:
-  # workflow_dispatch
-  push
+  workflow_dispatch # 수동 실행 이벤트 정의
+  # push # 즉시 반영
 
 jobs:
   ci:
@@ -10,7 +10,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-        
+    
     - name: Set up JDK 17
       uses: actions/setup-java@v4
       with:
